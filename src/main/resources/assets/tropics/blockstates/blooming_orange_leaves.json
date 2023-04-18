@@ -1,0 +1,17 @@
+
+{
+  "variants": {
+    "age=0": {
+      "model": "tropics:block/orange_leaves"
+    },
+    "age=1": {
+      "model": "tropics:block/blooming_orange_leaves"
+    },
+    "age=2": {
+      "model": "tropics:block/blooming_orange_leaves"
+    },
+    "age=3": {
+      "model": "tropics:block/blooming_orange_leaves"
+    }
+  }
+}

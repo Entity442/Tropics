@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "axis=x": {
+      "model": "tropics:block/lemon_log",
+      "x": 90,
+      "y": 90
+    },
+    "axis=y": {
+      "model": "tropics:block/lemon_log"
+    },
+    "axis=z": {
+      "model": "tropics:block/lemon_log",
+      "x": 90
+    }
+  }
+}

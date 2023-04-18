@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "#tropics:palm_logs",
+    "#tropics:lemon_logs",
+    "#tropics:orange_logs",
+    "#tropics:avocado_logs"
+  ]
+}
