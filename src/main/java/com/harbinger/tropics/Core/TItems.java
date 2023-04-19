@@ -1,5 +1,6 @@
 package com.harbinger.tropics.Core;
 
+import com.harbinger.tropics.TItems.AncientTotem;
 import com.harbinger.tropics.Tropics;
 import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.item.BlockItem;
@@ -19,7 +20,8 @@ public class TItems {
     }
     public  static final RegistryObject<Item> POISONFROG_SPAWNEGG = ITEMS.register("poisonfrog_spawnegg",
             () -> new ForgeSpawnEggItem(Tentities.POISONOUS_FROG,-1235818,-9423173, new Item.Properties()));
-
+    public static final RegistryObject<Item> COCONUT = ITEMS.register("coconut",
+            () -> new Item(new Item.Properties()));
     public static final RegistryObject<Item> AVOCADO = ITEMS.register("avocado",
             () -> new Item(new Item.Properties().food(new FoodProperties.Builder().nutrition(4).saturationMod(1f).build())));
     public static final RegistryObject<Item> LEMON = ITEMS.register("lemon",
@@ -28,7 +30,8 @@ public class TItems {
             () -> new Item(new Item.Properties().food(new FoodProperties.Builder().nutrition(3).saturationMod(0.5f).build())));
 
 
-
+    public static final RegistryObject<Item> ANCIENT_TOTEM = ITEMS.register("ancient_totem",
+            AncientTotem::new);
 
 
 

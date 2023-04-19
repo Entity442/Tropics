@@ -103,7 +103,7 @@ public class FruitLeavesBlock extends LeavesBlock implements BonemealableBlock {
         } else if (i > 1) {
             int j = 1 + level.random.nextInt(2);
             popResource(level, blockPos, new ItemStack(getfruit(state).getItem(), j + (flag ? 1 : 0)));
-            level.playSound((Player)null, blockPos, SoundEvents.SWEET_BERRY_BUSH_PICK_BERRIES, SoundSource.BLOCKS, 1.0F, 0.8F + level.random.nextFloat() * 0.4F);
+            level.playSound(null, blockPos, SoundEvents.SWEET_BERRY_BUSH_PICK_BERRIES, SoundSource.BLOCKS, 1.0F, 0.8F + level.random.nextFloat() * 0.4F);
             BlockState blockstate = state.setValue(AGE, 0);
             level.setBlock(blockPos, blockstate, 2);
             level.gameEvent(GameEvent.BLOCK_CHANGE, blockPos, GameEvent.Context.of(player, blockstate));

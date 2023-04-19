@@ -1,0 +1,25 @@
+{
+  "temperature": 0.8,
+  "downfall": 0.8,
+  "precipitation": "rain",
+  "effects": {
+    "sky_color": 4330068,
+    "fog_color": 5546125,
+    "water_color": 2642743,
+    "water_fog_color": 2192174,
+    "grass_color_modifier": "none"
+  },
+  "spawners": {
+    "monster": [
+      {
+        "type": "minecraft:slime",
+        "weight": 1,
+        "minCount": 1,
+        "maxCount": 3
+      }
+    ]
+  },
+  "spawn_costs": {},
+  "carvers": {},
+  "features": []
+}

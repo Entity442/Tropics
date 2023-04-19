@@ -1,9 +1,6 @@
 package com.harbinger.tropics;
 
-import com.harbinger.tropics.Core.TBiomes;
-import com.harbinger.tropics.Core.TItems;
-import com.harbinger.tropics.Core.Tblocks;
-import com.harbinger.tropics.Core.Tentities;
+import com.harbinger.tropics.Core.*;
 import com.harbinger.tropics.Tevents.LoadCreativeItems;
 import com.mojang.logging.LogUtils;
 import net.minecraftforge.common.MinecraftForge;
@@ -30,9 +27,14 @@ public class Tropics
         TItems.register(modEventBus);
         Tblocks.register(modEventBus);
         Tentities.register(modEventBus);
-        TBiomes.register(modEventBus);
-
+        TtrunkGenerator.register(modEventBus);
+        TfoliageGenerator.register(modEventBus);
         modEventBus.addListener(this::addCreative);
+
+
+
+        TBiomes.register();
+        TropicsDimension.register();
         GeckoLib.initialize();
     }
 
@@ -43,6 +45,7 @@ public class Tropics
     private void addCreative(CreativeModeTabEvent.BuildContents event)
     {
         if (event.getTab() == LoadCreativeItems.TROPICS_TAB) {
+            event.accept(TItems.ANCIENT_TOTEM);
             event.accept(TItems.POISONFROG_SPAWNEGG);
             event.accept(TItems.PALM_LOGS.get());
             event.accept(TItems.AVOCADO_LOGS.get());

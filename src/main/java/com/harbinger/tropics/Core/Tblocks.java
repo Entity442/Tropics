@@ -1,9 +1,6 @@
 package com.harbinger.tropics.Core;
 
-import com.harbinger.tropics.Tblocks.FlammableBlock;
-import com.harbinger.tropics.Tblocks.FlammableRotatedPillarBlock;
-import com.harbinger.tropics.Tblocks.FruitLeavesBlock;
-import com.harbinger.tropics.Tblocks.LogBlock;
+import com.harbinger.tropics.Tblocks.*;
 import com.harbinger.tropics.Trees.AvocadoTreeGrower;
 import com.harbinger.tropics.Trees.LemonTreeGrower;
 import com.harbinger.tropics.Trees.OrangeTreeGrower;
@@ -34,6 +31,8 @@ public class Tblocks {
     public static final RegistryObject<Block> PALM_LEAVES = BLOCKS.register("palm_leaves", () -> new LeavesBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES)));
     public static final RegistryObject<Block> PALM_PLANKS = BLOCKS.register("palm_planks", () -> new FlammableBlock(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS)));
     public static final RegistryObject<Block> PALM_SAPLING = BLOCKS.register("palm_sapling", () -> new SaplingBlock(new PalmTreeGrower(),BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING)));
+    public static final RegistryObject<Block> COCONUT_PLANT = BLOCKS.register("coconut_plant", CoconutNutBlock::new);
+
 
     public static final RegistryObject<Block> AVOCADO_LOGS = BLOCKS.register("avocado_log", () -> new LogBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LOG)));
     public static final RegistryObject<Block> STRIPPED_AVOCADO_LOGS = BLOCKS.register("stripped_avocado_log", () -> new FlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LOG)));
