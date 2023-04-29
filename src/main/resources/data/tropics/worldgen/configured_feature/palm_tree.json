@@ -29,8 +29,7 @@
       "state": {
         "Name": "tropics:palm_leaves",
         "Properties": {
-          "distance": "7",
-          "distance_9": "9",
+          "distance": "10",
           "persistent": "false",
           "waterlogged": "false"
         }

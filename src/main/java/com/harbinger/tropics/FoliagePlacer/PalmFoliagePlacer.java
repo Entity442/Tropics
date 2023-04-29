@@ -82,10 +82,7 @@ public class PalmFoliagePlacer extends FoliagePlacer {
         tryPlaceLeaf(pLevel, pBlockSetter, pRandom, pConfig, pos);
         pos.move(direction);
         tryPlaceLeaf(pLevel, pBlockSetter, pRandom, pConfig, pos.relative(direction.getClockWise()));
-        for (int i = 0; i < 3; i++) {
-            tryPlaceLeaf(pLevel, pBlockSetter, pRandom, pConfig, pos);
-            pos.move(Direction.DOWN);
-        }
+
     }
 
 }
