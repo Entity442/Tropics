@@ -57,6 +57,8 @@ public class FruitLeavesBlock extends LeavesBlock implements BonemealableBlock {
             return new ItemStack(TItems.LEMON.get());
         }else if (state.is(Tblocks.BLOOMING_ORANGE_LEAVES.get())){
             return new ItemStack(TItems.ORANGE.get());
+        }else if (state.is(Tblocks.BLOOMING_MANGO_LEAVES.get())){
+            return new ItemStack(TItems.MANGO.get());
         }
         return ItemStack.EMPTY;
     }

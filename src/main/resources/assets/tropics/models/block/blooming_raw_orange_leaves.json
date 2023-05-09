@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/leaves",
+  "textures": {
+    "all": "tropics:block/orange_leaves_with_oranges_raw"
+  }
+}

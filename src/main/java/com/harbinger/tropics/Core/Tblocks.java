@@ -1,10 +1,7 @@
 package com.harbinger.tropics.Core;
 
 import com.harbinger.tropics.Tblocks.*;
-import com.harbinger.tropics.Trees.AvocadoTreeGrower;
-import com.harbinger.tropics.Trees.LemonTreeGrower;
-import com.harbinger.tropics.Trees.OrangeTreeGrower;
-import com.harbinger.tropics.Trees.PalmTreeGrower;
+import com.harbinger.tropics.Trees.*;
 import com.harbinger.tropics.Tropics;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
@@ -30,7 +27,7 @@ public class Tblocks {
     public static final RegistryObject<Block> STRIPPED_PALM_LOGS = BLOCKS.register("stripped_palm_log", () -> new FlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LOG)));
     public static final RegistryObject<Block> PALM_LEAVES = BLOCKS.register("palm_leaves", () -> new LeavesBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES)));
     public static final RegistryObject<Block> PALM_PLANKS = BLOCKS.register("palm_planks", () -> new FlammableBlock(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS)));
-    public static final RegistryObject<Block> PALM_SAPLING = BLOCKS.register("palm_sapling", () -> new SaplingBlock(new PalmTreeGrower(),BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING)));
+    public static final RegistryObject<Block> PALM_SAPLING = BLOCKS.register("palm_sapling", () -> new SandSapling(new PalmTreeGrower(),BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING)));
     public static final RegistryObject<Block> COCONUT_PLANT = BLOCKS.register("coconut_plant", CoconutNutBlock::new);
 
 
@@ -55,6 +52,12 @@ public class Tblocks {
     public static final RegistryObject<Block> ORANGE_PLANKS = BLOCKS.register("orange_planks", () -> new FlammableBlock(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS)));
     public static final RegistryObject<Block> ORANGE_SAPLING = BLOCKS.register("orange_sapling", () -> new SaplingBlock(new OrangeTreeGrower(),BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING)));
 
+    public static final RegistryObject<Block> MANGO_LOGS = BLOCKS.register("mango_log", () -> new LogBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LOG)));
+    public static final RegistryObject<Block> STRIPPED_MANGO_LOGS = BLOCKS.register("stripped_mango_log", () -> new FlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LOG)));
+    public static final RegistryObject<Block> MANGO_LEAVES = BLOCKS.register("mango_leaves", () -> new LeavesBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES)));
+    public static final RegistryObject<Block> BLOOMING_MANGO_LEAVES = BLOCKS.register("blooming_mango_leaves", FruitLeavesBlock::new);
+    public static final RegistryObject<Block> MANGO_PLANKS = BLOCKS.register("mango_planks", () -> new FlammableBlock(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS)));
+    public static final RegistryObject<Block> MANGO_SAPLING = BLOCKS.register("mango_sapling", () -> new SaplingBlock(new MangoTreeGrower(),BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING)));
 
 
 }

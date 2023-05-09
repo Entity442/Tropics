@@ -5,10 +5,10 @@
       "model": "tropics:block/lemon_leaves"
     },
     "age=1": {
-      "model": "tropics:block/blooming_lemon_leaves"
+      "model": "tropics:block/blooming_raw_lemon_leaves"
     },
     "age=2": {
-      "model": "tropics:block/blooming_lemon_leaves"
+      "model": "tropics:block/blooming_raw_lemon_leaves"
     },
     "age=3": {
       "model": "tropics:block/blooming_lemon_leaves"

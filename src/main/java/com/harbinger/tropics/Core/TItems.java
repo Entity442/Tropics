@@ -27,8 +27,9 @@ public class TItems {
     public static final RegistryObject<Item> LEMON = ITEMS.register("lemon",
             () -> new Item(new Item.Properties().food(new FoodProperties.Builder().nutrition(3).saturationMod(0.2f).build())));
     public static final RegistryObject<Item> ORANGE = ITEMS.register("orange",
-            () -> new Item(new Item.Properties().food(new FoodProperties.Builder().nutrition(3).saturationMod(0.5f).build())));
-
+            () -> new Item(new Item.Properties().food(new FoodProperties.Builder().nutrition(5).saturationMod(0.5f).build())));
+    public static final RegistryObject<Item> MANGO = ITEMS.register("mango",
+            () -> new Item(new Item.Properties().food(new FoodProperties.Builder().nutrition(6).saturationMod(0.5f).build())));
 
     public static final RegistryObject<Item> ANCIENT_TOTEM = ITEMS.register("ancient_totem",
             AncientTotem::new);
@@ -65,4 +66,11 @@ public class TItems {
     public static final RegistryObject<Item> BLOOMING_ORANGE_LEAVES = block(Tblocks.BLOOMING_ORANGE_LEAVES);
     public static final RegistryObject<Item> ORANGE_PLANKS = block(Tblocks.ORANGE_PLANKS);
     public static final RegistryObject<Item> ORANGE_SAPLING = block(Tblocks.ORANGE_SAPLING);
+
+    public static final RegistryObject<Item> MANGO_LOGS = block(Tblocks.MANGO_LOGS);
+    public static final RegistryObject<Item> STRIPPED_MANGO_LOGS = block(Tblocks.STRIPPED_MANGO_LOGS);
+    public static final RegistryObject<Item> MANGO_LEAVES = block(Tblocks.MANGO_LEAVES);
+    public static final RegistryObject<Item> BLOOMING_MANGO_LEAVES = block(Tblocks.BLOOMING_MANGO_LEAVES);
+    public static final RegistryObject<Item> MANGO_PLANKS = block(Tblocks.MANGO_PLANKS);
+    public static final RegistryObject<Item> MANGO_SAPLING = block(Tblocks.MANGO_SAPLING);
 }

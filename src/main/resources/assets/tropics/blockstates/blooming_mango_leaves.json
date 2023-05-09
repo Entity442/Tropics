@@ -1,0 +1,17 @@
+
+{
+  "variants": {
+    "age=0": {
+      "model": "tropics:block/mango_leaves"
+    },
+    "age=1": {
+      "model": "tropics:block/blooming_raw_mango_leaves"
+    },
+    "age=2": {
+      "model": "tropics:block/blooming_raw_mango_leaves"
+    },
+    "age=3": {
+      "model": "tropics:block/blooming_mango_leaves"
+    }
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/leaves",
+  "textures": {
+    "all": "tropics:block/lemon_leaves_with_lemon_raw"
+  }
+}

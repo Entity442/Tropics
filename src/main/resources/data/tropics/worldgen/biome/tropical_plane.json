@@ -23,5 +23,27 @@
   },
   "spawn_costs": {},
   "carvers": {},
-  "features": []
+  "features": [
+    [
+      "minecraft:patch_grass_jungle",
+      "minecraft:patch_tall_grass",
+      "minecraft:patch_sugar_cane_swamp",
+      "minecraft:patch_waterlily",
+      "minecraft:vines",
+      "minecraft:bamboo_light",
+      "minecraft:seagrass_deep_warm"
+    ],
+    [
+      "minecraft:disk_gravel",
+      "minecraft:disk_sand",
+      "minecraft:disk_clay"
+    ],
+    [
+      "tropics:palm_tree",
+      "tropics:avocado_tree",
+      "tropics:lemon_tree",
+      "tropics:orange_tree",
+      "tropics:mango_tree"
+    ]
+  ]
 }

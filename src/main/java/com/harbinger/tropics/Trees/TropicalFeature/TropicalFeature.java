@@ -11,6 +11,7 @@ public class TropicalFeature {
     public static final ResourceKey<ConfiguredFeature<?, ?>> AVOCADO_TREE = registerKey("avocado_tree");
     public static final ResourceKey<ConfiguredFeature<?, ?>> ORANGE_TREE = registerKey("orange_tree");
     public static final ResourceKey<ConfiguredFeature<?, ?>> LEMON_TREE = registerKey("lemon_tree");
+    public static final ResourceKey<ConfiguredFeature<?, ?>> MANGO_TREE = registerKey("mango_tree");
 
 
 

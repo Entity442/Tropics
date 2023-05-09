@@ -47,34 +47,46 @@ public class Tropics
         if (event.getTab() == LoadCreativeItems.TROPICS_TAB) {
             event.accept(TItems.ANCIENT_TOTEM);
             event.accept(TItems.POISONFROG_SPAWNEGG);
+
             event.accept(TItems.PALM_LOGS.get());
             event.accept(TItems.AVOCADO_LOGS.get());
             event.accept(TItems.ORANGE_LOGS.get());
             event.accept(TItems.LEMON_LOGS.get());
+            event.accept(TItems.MANGO_LOGS.get());
+
             event.accept(TItems.STRIPPED_PALM_LOGS.get());
             event.accept(TItems.STRIPPED_AVOCADO_LOGS.get());
             event.accept(TItems.STRIPPED_ORANGE_LOGS.get());
             event.accept(TItems.STRIPPED_LEMON_LOGS.get());
+            event.accept(TItems.STRIPPED_MANGO_LOGS.get());
+
             event.accept(TItems.PALM_PLANKS.get());
             event.accept(TItems.AVOCADO_PLANKS.get());
             event.accept(TItems.ORANGE_PLANKS.get());
             event.accept(TItems.LEMON_PLANKS.get());
-            event.accept(TItems.STRIPPED_ORANGE_LOGS.get());
-            event.accept(TItems.STRIPPED_LEMON_LOGS.get());
+            event.accept(TItems.MANGO_PLANKS.get());
+
             event.accept(TItems.PALM_LEAVES.get());
             event.accept(TItems.AVOCADO_LEAVES.get());
             event.accept(TItems.ORANGE_LEAVES.get());
             event.accept(TItems.LEMON_LEAVES.get());
+            event.accept(TItems.MANGO_LEAVES.get());
+
             event.accept(TItems.BLOOMING_AVOCADO_LEAVES.get());
             event.accept(TItems.BLOOMING_LEMON_LEAVES.get());
             event.accept(TItems.BLOOMING_ORANGE_LEAVES.get());
+            event.accept(TItems.BLOOMING_MANGO_LEAVES.get());
+
             event.accept(TItems.PALM_SAPLING.get());
             event.accept(TItems.AVOCADO_SAPLING.get());
             event.accept(TItems.ORANGE_SAPLING.get());
             event.accept(TItems.LEMON_SAPLING.get());
+            event.accept(TItems.MANGO_SAPLING.get());
+
             event.accept(TItems.AVOCADO.get());
             event.accept(TItems.LEMON.get());
             event.accept(TItems.ORANGE.get());
+            event.accept(TItems.MANGO.get());
         }
     }
 }
