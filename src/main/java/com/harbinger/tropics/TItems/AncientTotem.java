@@ -1,6 +1,7 @@
 package com.harbinger.tropics.TItems;
 
 import com.harbinger.tropics.Core.SpawnHelper;
+import com.harbinger.tropics.Core.TItems;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.protocol.game.ClientboundGameEventPacket;
@@ -22,6 +23,7 @@ import net.minecraft.world.level.Level;
 public class AncientTotem extends Item {
     public AncientTotem() {
         super(new Item.Properties().stacksTo(1).durability(2));
+        TItems.TROPICAL_ITEMS.add(this);
     }
 
     @Override
@@ -30,7 +32,7 @@ public class AncientTotem extends Item {
         if (player instanceof ServerPlayer serverPlayer && !level.isClientSide){
             ResourceKey<Level> destinationType = ResourceKey.create(Registries.DIMENSION, new ResourceLocation("tropics:tropics"));
             ResourceKey<Level> oldDestination = ResourceKey.create(Registries.DIMENSION, new ResourceLocation("minecraft:overworld"));
-            if (!(serverPlayer.level.dimension() == destinationType)){
+            if (!(serverPlayer.getLevel().dimension() == destinationType)){
                 ServerLevel nextLevel = serverPlayer.server.getLevel(destinationType);
                     if (nextLevel != null) {
                         serverPlayer.connection.send(new ClientboundGameEventPacket(ClientboundGameEventPacket.WIN_GAME, 0));
@@ -39,7 +41,7 @@ public class AncientTotem extends Item {
                         SpawnHelper.getSpawn(nextLevel, pos);
                         serverPlayer.teleportTo(nextLevel, pos.getX(), pos.getY(), pos.getZ(), player.getYRot(), player.getXRot());
                     }
-            }else if (serverPlayer.level.dimension() == destinationType){
+            }else if (serverPlayer.getLevel().dimension() == destinationType){
                  ServerLevel nextLevel = serverPlayer.server.getLevel(oldDestination);
                 if (nextLevel != null) {
                     serverPlayer.connection.send(new ClientboundGameEventPacket(ClientboundGameEventPacket.WIN_GAME, 0));

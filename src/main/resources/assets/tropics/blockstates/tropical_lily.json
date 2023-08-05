@@ -1,0 +1,17 @@
+{
+  "variants": {
+    "":[
+      {"model": "tropics:block/tropical_lily"},
+
+      {"model": "tropics:block/tropical_lily",
+        "y": 90
+      },
+      {"model": "tropics:block/tropical_lily",
+        "y": 180
+      },
+      {"model": "tropics:block/tropical_lily",
+        "y": 270
+      }
+    ]
+  }
+}

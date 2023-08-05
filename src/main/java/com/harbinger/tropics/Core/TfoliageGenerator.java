@@ -1,5 +1,6 @@
 package com.harbinger.tropics.Core;
 
+import com.harbinger.tropics.FoliagePlacer.FancyJungleFoliagePlacer;
 import com.harbinger.tropics.FoliagePlacer.PalmFoliagePlacer;
 import com.harbinger.tropics.Tropics;
 import net.minecraft.world.level.levelgen.feature.foliageplacers.FoliagePlacer;
@@ -19,4 +20,7 @@ public class TfoliageGenerator <P extends FoliagePlacer> {
     public static final RegistryObject<FoliagePlacerType<?>> PALM_FOLIAGE_PLACER =
             FOLIAGE_PLACERS.register("palm_foliage_placer", () -> new FoliagePlacerType<>(PalmFoliagePlacer.CODEC));
 
+
+    public static final RegistryObject<FoliagePlacerType<?>> FANCY_JUNGLE_FOLIAGE_PLACER =
+            FOLIAGE_PLACERS.register("fancy_jungle_foliage_placer", () -> new FoliagePlacerType<>(FancyJungleFoliagePlacer.CODEC));
 }

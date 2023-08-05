@@ -11,11 +11,11 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.gameevent.GameEvent;
-import net.minecraft.world.level.material.Material;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
 
@@ -23,7 +23,7 @@ public class CoconutNutBlock extends FruitBlock{
     private static final VoxelShape SAPLING_SHAPE = Block.box(3.0D, 8.0D, 3.0D, 13.0D, 16.0D, 13.0D);
     private static final VoxelShape MID_GROWTH_SHAPE = Block.box(2.0D, 3.0D, 2.0D, 14.0D, 16.0D, 14.0D);
     public CoconutNutBlock() {
-        super(BlockBehaviour.Properties.of(Material.WOOD).strength(1f,1f).sound(SoundType.WOOD).randomTicks().noCollission());
+        super(BlockBehaviour.Properties.copy(Blocks.OAK_LOG).strength(1f,1f).sound(SoundType.WOOD).randomTicks().noCollission());
     }
 
     @Override

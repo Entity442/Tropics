@@ -138,8 +138,8 @@ public class PoisonousFrogs extends Animal implements Bucketable , GeoEntity {
 
 
     public void updateSwimming() {
-        if (!this.level.isClientSide) {
-            if (this.isEffectiveAi() && this.isInWater()) {
+        if (!this.getLevel().isClientSide) {
+            if (!this.isNoAi() && this.isInWater()) {
                 this.navigation = this.waterNavigation;
                 this.setSwimming(true);
             } else {
@@ -163,7 +163,7 @@ public class PoisonousFrogs extends Animal implements Bucketable , GeoEntity {
 
         boolean check(){
             AABB hitbox = this.frog.getBoundingBox();
-            List<Entity> entities = this.frog.level.getEntities(this.frog, hitbox);
+            List<Entity> entities = this.frog.getLevel().getEntities(this.frog, hitbox);
             for (Entity entity : entities) {
                 if(entity instanceof LivingEntity livingEntity && !(livingEntity instanceof PoisonousFrogs)) {
                   return true;
@@ -176,7 +176,7 @@ public class PoisonousFrogs extends Animal implements Bucketable , GeoEntity {
         public void tick() {
             super.tick();
             AABB hitbox = this.frog.getBoundingBox();
-            List<Entity> entities = this.frog.level.getEntities(this.frog, hitbox);
+            List<Entity> entities = this.frog.getLevel().getEntities(this.frog, hitbox);
             for (Entity entity : entities) {
                 if(entity instanceof LivingEntity livingEntity && !(livingEntity instanceof PoisonousFrogs)) {
                     if (this.frog.getVariant() == 0) {

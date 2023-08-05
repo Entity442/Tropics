@@ -10,6 +10,7 @@ public class TBiomes {
     public static final ResourceKey<Biome> TROPICAL_PLANE = ResourceKey.create(Registries.BIOME,
             new ResourceLocation(Tropics.MODID, "tropical_plane"));
 
+
     public static void register() {
         System.out.println("Registering " + Tropics.MODID + " Biomes");
     }

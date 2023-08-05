@@ -1,6 +1,9 @@
 package com.harbinger.tropics.Core;
 
 import com.harbinger.tropics.TItems.AncientTotem;
+import com.harbinger.tropics.TItems.BlockItemBase;
+import com.harbinger.tropics.TItems.ItemBase;
+import com.harbinger.tropics.TItems.TropicalSpawnEgg;
 import com.harbinger.tropics.Tropics;
 import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.item.BlockItem;
@@ -12,24 +15,31 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class TItems {
     public static final DeferredRegister<Item> ITEMS =
             DeferredRegister.create(ForgeRegistries.ITEMS, Tropics.MODID);
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);
     }
+
+    public static final List<Item> TROPICAL_ITEMS = new ArrayList<>();
+
+
     public  static final RegistryObject<Item> POISONFROG_SPAWNEGG = ITEMS.register("poisonfrog_spawnegg",
-            () -> new ForgeSpawnEggItem(Tentities.POISONOUS_FROG,-1235818,-9423173, new Item.Properties()));
+            () -> new TropicalSpawnEgg(Tentities.POISONOUS_FROG, new Item.Properties()));
     public static final RegistryObject<Item> COCONUT = ITEMS.register("coconut",
-            () -> new Item(new Item.Properties()));
+            () -> new ItemBase(new Item.Properties()));
     public static final RegistryObject<Item> AVOCADO = ITEMS.register("avocado",
-            () -> new Item(new Item.Properties().food(new FoodProperties.Builder().nutrition(4).saturationMod(1f).build())));
+            () -> new ItemBase(new Item.Properties().food(new FoodProperties.Builder().nutrition(4).saturationMod(1f).build())));
     public static final RegistryObject<Item> LEMON = ITEMS.register("lemon",
-            () -> new Item(new Item.Properties().food(new FoodProperties.Builder().nutrition(3).saturationMod(0.2f).build())));
+            () -> new ItemBase(new Item.Properties().food(new FoodProperties.Builder().nutrition(3).saturationMod(0.2f).build())));
     public static final RegistryObject<Item> ORANGE = ITEMS.register("orange",
-            () -> new Item(new Item.Properties().food(new FoodProperties.Builder().nutrition(5).saturationMod(0.5f).build())));
+            () -> new ItemBase(new Item.Properties().food(new FoodProperties.Builder().nutrition(5).saturationMod(0.5f).build())));
     public static final RegistryObject<Item> MANGO = ITEMS.register("mango",
-            () -> new Item(new Item.Properties().food(new FoodProperties.Builder().nutrition(6).saturationMod(0.5f).build())));
+            () -> new ItemBase(new Item.Properties().food(new FoodProperties.Builder().nutrition(6).saturationMod(0.5f).build())));
 
     public static final RegistryObject<Item> ANCIENT_TOTEM = ITEMS.register("ancient_totem",
             AncientTotem::new);
@@ -38,8 +48,10 @@ public class TItems {
 
 
     private static RegistryObject<Item> block(RegistryObject<Block> block) {
-        return ITEMS.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties()));
+        return ITEMS.register(block.getId().getPath(), () -> new BlockItemBase(block.get(), new Item.Properties()));
     }
+
+    public static final RegistryObject<Item> TROPICAL_LILY_PAD = block(Tblocks.TROPICAL_LILY_PAD);
     public static final RegistryObject<Item> PALM_LOGS = block(Tblocks.PALM_LOGS);
     public static final RegistryObject<Item> STRIPPED_PALM_LOGS = block(Tblocks.STRIPPED_PALM_LOGS);
     public static final RegistryObject<Item> PALM_LEAVES = block(Tblocks.PALM_LEAVES);

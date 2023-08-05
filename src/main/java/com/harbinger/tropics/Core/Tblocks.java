@@ -3,12 +3,7 @@ package com.harbinger.tropics.Core;
 import com.harbinger.tropics.Tblocks.*;
 import com.harbinger.tropics.Trees.*;
 import com.harbinger.tropics.Tropics;
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.Items;
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.Blocks;
-import net.minecraft.world.level.block.LeavesBlock;
-import net.minecraft.world.level.block.SaplingBlock;
+import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
@@ -19,9 +14,7 @@ public class Tblocks {
     public static final DeferredRegister<Block> BLOCKS =
             DeferredRegister.create(ForgeRegistries.BLOCKS, Tropics.MODID);
 
-    public static void register(IEventBus eventBus) {
-        BLOCKS.register(eventBus);
-    }
+
 
     public static final RegistryObject<Block> PALM_LOGS = BLOCKS.register("palm_log", () -> new LogBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LOG)));
     public static final RegistryObject<Block> STRIPPED_PALM_LOGS = BLOCKS.register("stripped_palm_log", () -> new FlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LOG)));
@@ -60,4 +53,10 @@ public class Tblocks {
     public static final RegistryObject<Block> MANGO_SAPLING = BLOCKS.register("mango_sapling", () -> new SaplingBlock(new MangoTreeGrower(),BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING)));
 
 
+
+    public static final RegistryObject<Block> TROPICAL_LILY_PAD = BLOCKS.register("tropical_lily", () -> new WaterlilyBlock(BlockBehaviour.Properties.copy(Blocks.LILY_PAD).sound(SoundType.LILY_PAD).noOcclusion()));
+
+    public static void register(IEventBus eventBus) {
+        BLOCKS.register(eventBus);
+    }
 }
